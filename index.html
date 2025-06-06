@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>学生姓名识别练习</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #preview-area { min-height: 300px; border: 2px dashed #ccc; }
+        .correct { background-color: #d4edda!important; }
+        .wrong { background-color: #f8d7da!important; }
+        .btn-group { gap: 10px; }  /* 新增：按钮组间距 */
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <!-- 标题居中修改 -->
+        <h1 class="mb-4 text-center">学生姓名识别练习</h1>
+        
+        <!-- 文件上传区 -->
+        <div class="mb-4">
+            <input type="file" id="excelFile" class="form-control" accept=".xlsx">
+        </div>
+
+        <!-- 题目展示区 -->
+        <div class="card mb-4">
+            <div class="card-body text-center">
+                <div id="preview-area" class="p-3"></div>
+                <input type="text" id="answerInput" class="form-control mt-3" placeholder="请输入学生姓名">
+                <!-- 按钮组修改：添加跳过按钮 -->
+                <div class="btn-group mt-3 d-flex justify-content-center">
+                    <button id="submitBtn" class="btn btn-primary">提交答案</button>
+                    <button id="skipBtn" class="btn btn-secondary">跳过</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 统计面板修改：新增已跳过题数 -->
+        <div class="card">
+            <div class="card-body">
+                <h5>答题统计</h5>
+                <p>已答题：<span id="answeredCount">0</span></p>
+                <p>已跳过：<span id="skippedCount">0</span></p>  <!-- 新增统计项 -->
+                <p>正确率：<span id="accuracyRate">0%</span></p>
+                <button id="restartBtn" class="btn btn-secondary">重新开始</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
