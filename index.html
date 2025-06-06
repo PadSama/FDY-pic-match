@@ -1,3 +1,11 @@
+<script>
+  // 如果用户访问的是 README 页面（结尾有斜杠）
+  if(window.location.pathname.endsWith('/') && 
+     document.querySelector('meta[name="go-import"]')) {
+    window.location.href = '/index.html';
+  }
+</script>
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
