@@ -13,6 +13,7 @@ CORS(app)  # 保持跨域支持
 
 @app.route('/process_excel', methods=['POST'])
 def process_excel():
+    print("=== 收到文件上传请求 ===")
     try:
         # 校验是否上传了文件
         if 'file' not in request.files:
