@@ -1,7 +1,7 @@
 {
   "version": 2,
   "routes": [
-    { "src": "/api/process_excel", "dest": "app.py" },
+    { "src": "/api/process_excel", "dest": "api/app.py" },
     { "src": "/(.*)\\.(js|html|css|png|jpg|jpeg|gif|ico|json|txt|map|svg)$", "dest": "$1.$2" },
     { "src": "/(.*)", "dest": "index.html" }
   ]
