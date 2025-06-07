@@ -26,7 +26,7 @@ class ExerciseSystem {
       // 修改为10秒超时（10000毫秒）
       const timeoutId = setTimeout(() => controller.abort(), 10000);
       
-      const response = await fetch('https://match-houduan-rapvbwndce.cn-hangzhou.fcapp.run', {
+      const response = await fetch('https://1363022687-7mmqtdcbrt.ap-guangzhou.tencentscf.com', {
         method: 'POST',
         body: formData,
         signal: controller.signal // 关联超时信号
