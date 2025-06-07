@@ -1,7 +1,9 @@
 {
   "version": 2,
   "builds": [
-    { "src": "app.py", "use": "@vercel/python" }
+    { "src": "app.py", "use": "@vercel/python" },
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "app.js", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/process_excel", "dest": "app.py" },
