@@ -24,7 +24,7 @@ class ExerciseSystem {
       // 新增：设置请求超时（5秒）
       const controller = new AbortController();
       // 修改为10秒超时（10000毫秒）
-      const timeoutId = setTimeout(() => controller.abort(), 10000);
+      const timeoutId = setTimeout(() => controller.abort(), 30000);
       
       const response = await fetch('/api/process_excel', {  // 修改为Vercel API路径
         method: 'POST',
