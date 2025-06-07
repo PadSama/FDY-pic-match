@@ -1,0 +1,5 @@
+flask==2.0.3  # 与腾讯云内置版本兼容
+flask-cors==3.0.10  # 跨域支持
+openpyxl==3.1.2  # 兼容 Python3.9 的稳定版
+Werkzeug==2.0.3
+gunicorn==20.1.0  // 可选：若Vercel要求WSGI服务器可添加

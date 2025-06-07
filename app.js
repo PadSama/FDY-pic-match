@@ -26,7 +26,7 @@ class ExerciseSystem {
       // 修改为10秒超时（10000毫秒）
       const timeoutId = setTimeout(() => controller.abort(), 10000);
       
-      const response = await fetch('https://1363022687-k5yb8adfgc.ap-chengdu.tencentscf.com/process_excel', {  // 替换为你的公网地址
+      const response = await fetch('/api/process_excel', {  // 修改为Vercel API路径
         method: 'POST',
         body: formData,
         signal: controller.signal // 关联超时信号

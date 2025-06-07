@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "app.py", "use": "@vercel/python" }  // 指定Python函数入口
+  ],
+  "routes": [
+    { "src": "/api/process_excel", "dest": "app.py" },  // 映射API路径到app.py
+    { "src": "/(.*)", "dest": "index.html" }  // 其他路径指向静态页面
+  ]
+}
