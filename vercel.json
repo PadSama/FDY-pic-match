@@ -4,7 +4,7 @@
     { "src": "app.py", "use": "@vercel/python" }
   ],
   "routes": [
-    { "src": "/api/process_excel", "dest": "app.py" },  // 修正：仅保留app.py，由Flask处理具体路由
+    { "src": "/api/process_excel", "dest": "app.py" },
     { "src": "/(.*)", "dest": "index.html" }
   ]
 }
