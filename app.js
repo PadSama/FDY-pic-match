@@ -26,7 +26,7 @@ class ExerciseSystem {
       // 修改为10秒超时（10000毫秒）
       const timeoutId = setTimeout(() => controller.abort(), 10000);
       
-      const response = await fetch('https://1363022687-7mmqtdcbrt.ap-guangzhou.tencentscf.com', {
+      const response = await fetch('https://1363022687-k5yb8adfgc.ap-chengdu.tencentscf.com/process_excel', {  // 替换为你的公网地址
         method: 'POST',
         body: formData,
         signal: controller.signal // 关联超时信号
@@ -42,6 +42,9 @@ class ExerciseSystem {
         name: item.name,
         image: item.image
       }));
+      
+      // 新增：清空文件输入框，避免重复上传同一文件
+      document.getElementById('excelFile').value = '';
       
       this.nextQuestion();
     } catch (error) {
