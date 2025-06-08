@@ -4,5 +4,11 @@
     { "src": "/api/process_excel", "dest": "api/app.py" },
     { "src": "/(.*)\\.(js|html|css|png|jpg|jpeg|gif|ico|json|txt|map|svg)$", "dest": "$1.$2" },
     { "src": "/(.*)", "dest": "index.html" }
-  ]
+  ],
+  "functions": {
+    "api/app.py": {
+      "memory": 512,   
+      "maxDuration": 30 
+    }
+  }
 }
