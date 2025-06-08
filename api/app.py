@@ -11,7 +11,7 @@ import os
 app = Flask(__name__)
 CORS(app)  # 保持跨域支持
 
-@app.route('/process_excel', methods=['POST'])
+@app.route('/api/process_excel', methods=['POST'])
 def process_excel():
     print("=== 收到文件上传请求 ===")
     try:
